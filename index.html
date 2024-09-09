@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a onclick="h();"><i class="fa-solid fa-house" style="color: white;font-size: 25px;cursor: pointer;margin: 20px;"></i></a>
+        <h2>Oteach</h2>
+        <button onclick="rab()">Report a bug</button>
+
+        
+    </header>
+    <div class="pop-screen" id="p-s">
+        <h3 ><img src="icon/egy.png" alt="" width="50px" height="35px" style="margin-right: 2px;border-radius: 4px;">+20 1093721344</h3>
+        <h3>omarmario497@gmail.com</h3>
+        <button onclick="quit()">ok</button>
+
+    </div>
+
+    <iframe src="main.html" frameborder="0"></iframe>
+    <script>
+        function h(){
+            document.querySelector("iframe").src="main.html";
+        }
+        function rab(){
+            document.getElementById("p-s").style.display="block";
+            document.querySelector("iframe").style.display="none";
+            document.querySelector("header").style.display="none";
+
+            
+        }
+        function quit(){
+            document.getElementById("p-s").style.display="none";
+            document.querySelector("iframe").style.display="block";
+            document.querySelector("header").style.display="flex";
+
+        }
+    </script>
+    
+</body>
+</html>
